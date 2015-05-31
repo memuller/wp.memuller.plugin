@@ -26,26 +26,17 @@
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 	*/
 
+	/* Specify the plugin namespace here, otherwise we'll use the plugin's folder. */
+	$namespace = 'Sample';
 
-	# Requires vendored libs and base structure.
-	if(!function_exists('display_haml')) require_once 'lib/vendors/haml/HamlParser.class.php' ;
-	#require_once 'lib/vendors/recaptcha-php/recaptchalib.php';
-	if(!class_exists('BasePlugin')) require_once 'lib/BasePlugin.php' ;
-	if(!class_exists('Presenter')) require_once 'lib/Presenter.php' ;
-	if(!class_exists('BaseItem')) require_once 'lib/BaseItem.php' ;
-	if(!class_exists('BasePost')) require_once 'lib/BasePost.php' ;
-	if(!class_exists('DB_Object')) require_once 'lib/DB_Object.php' ;
-	if(!class_exists('CustomPost')) require_once 'lib/CustomPost.php' ;
-	if(!class_exists('CustomPostFormat')) require_once 'lib/CustomPostFormat.php' ;
-	if(!class_exists('CustomTaxonomy')) require_once 'lib/CustomTaxonomy.php' ;
-	if(!class_exists('CustomUser')) require_once 'lib/CustomUser.php' ;
-	if(!class_exists('Translation')) require_once 'lib/Translation.php' ;
-	
-	# Requires WP table/list framework.
-	#if(!class_exists('WP_List_Table')) require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+	/* Features dependant on external libraries.
+	 * haml : haml parser for templates
+	 * ganon : the ganon library, with file_get_dom() function
+	 * recaptcha : recaptcha lib
+	 * list-table : WP_List_Table for building nice tabular lists on the admin side
+	*/
+	$features = array('ganon');
 
-	if(!function_exists('file_get_dom')) require 'vendors/ganon.php' ;
-	require 'base/Base.php' ;
-	Sample\Plugin::build();
+	require 'lib/loader.php';
 
 ?>
