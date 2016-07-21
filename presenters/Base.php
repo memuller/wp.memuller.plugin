@@ -1,5 +1,5 @@
 <?php
-	namespace Sample\Presenters ;
+	namespace MEM\Presenters ;
 	use Presenter ;
 
 	class Base extends Presenter {

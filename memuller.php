@@ -1,9 +1,9 @@
 <?php
 	/*
-	Plugin Name: Bricks Sample Plugin
-	Version: 2015.05a
-	Plugin URI: http://github.com/memuller/bricks-sample
-	Description: Sample and skeleton file for the Bricks Wordpress plugin framework.
+	Plugin Name: memuller plugin
+	Version: 2016.07a
+	Plugin URI: https://gitlab.com/memuller.web/
+	Description: Stuff for the site at memuller.com.
 	Author: Matheus Muller
 	Author URI: http://memuller.com
 	*/
@@ -27,7 +27,7 @@
 	*/
 
 	/* Specify the plugin namespace here, otherwise we'll use the plugin's folder. */
-	$namespace = 'Sample';
+	$namespace = 'MEM';
 
 	/* Features dependant on external libraries.
 	 * haml : haml parser for templates
@@ -35,7 +35,7 @@
 	 * recaptcha : recaptcha lib
 	 * list-table : WP_List_Table for building nice tabular lists on the admin side
 	*/
-	$features = array('ganon');
+	$features = [];
 
 	require 'lib/loader.php';
 

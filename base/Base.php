@@ -1,5 +1,5 @@
 <?php
-	namespace Sample ;
+	namespace MEM ;
 	use BasePlugin ;
 
 	class Plugin extends BasePlugin {
